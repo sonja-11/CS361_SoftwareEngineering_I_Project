@@ -1,0 +1,30 @@
+<nav>
+    <a href="/">Home</a> |
+    <a href="/about">About</a> |
+    <a href="/contact">Contact</a>
+</nav>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Flask Website</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1>Welcome to my website</h1>
+
+    <!-- Image -->
+    <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+
+    <!-- Button -->
+    <button>Click Me</button>
+
+    <!-- Form -->
+    <form action="/contact" method="post">
+        <input type="text" name="name" placeholder="Your Name">
+        <button type="submit">Send</button>
+    </form>
+
+</body>
+</html>
